@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Редактировать статью</h1>
+<div th:each="el : ${post}">
+    <form method="post">
+        <input type="text" th:value="${el.title}" name="title" placeholder="Название статьи">
+        <input type="text" th:value="${el.anons}" name="anons" placeholder="Анонс статьи">
+        <textarea name="full_text" placeholder="Текст статьи" th:text="${el.full_text}" />
+        <button type="submit">Сохранить</button>
+    </form>
+</div>
+</body>
+</html>

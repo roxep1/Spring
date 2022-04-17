@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Регистрация
+<div th:if="${#messages}">
+    <p th:text="${message}"></p>
+</div>
+<form th:action="@{/registration}" method="post">
+    <div><label> Username : <input type="text"  name="username"/></label></div> <!--th:field="*{user.username}" id="username"-->
+    <div><label> Password : <input type="password" name="password"/></label></div> <!-- th:field="*{user.password}" id="password"-->
+<!--    <div style="color:red" th:if="${#fields.hasErrors('username')}" th:errors="*{user.username}"></div>-->
+<!--    <div style="color:red" th:if="${#fields.hasErrors('password')}" th:errors="*{user.password}"></div>-->
+    <div><input type="submit" value="Sign up"/></div>
+</form>
+
+</body>
+</html>

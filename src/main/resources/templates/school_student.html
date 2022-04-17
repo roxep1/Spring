@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:each="el: ${student}">
+    <h2 th:text="${el.name}"></h2>
+    <p th:text="${el.phone}"></p>
+    <p th:text="${el.address}"></p>
+    <p th:text="${el.old}"></p>
+    <p th:text="${el.birthday}"></p>
+    <p th:text="${el.groupId.name}"></p>
+    <a th:href="'/school/' + ${el.id} + '/edit'">Редактировать</a>
+    <form th:action="'/school/' + ${el.id} + '/delete'" method="post">
+        <button type="submit">Удалить</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Студенты</h2>
+    <div th:each="student: ${students}">
+        <h3 th:text="${student.name}"></h3>
+        <p th:text="${student.id}"></p>
+        <a th:href="'/school/' + ${student.id}">Подробнее</a>
+    </div>
+    <h2>Предметы</h2>
+    <div th:each="sub : ${subjects}">
+        <h3 th:text="${sub.name}"></h3>
+        <p th:text="${sub.duration}"></p>
+        <p th:text="${sub.id}"></p>
+    </div>
+    <h2>Группы</h2>
+    <div th:each="gp : ${groups}">
+        <h3 th:text="${gp.name}"></h3>
+        <p th:text="${gp.countOfStudent}"></p>
+        <p th:text="${gp.id}"></p>
+    </div>
+</body>
+</html>

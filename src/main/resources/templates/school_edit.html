@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    <input type="text" th:value="${student.name}" name="name" placeholder="Имя студента">
+    <input type="text" th:value="${student.phone}" name="phone" placeholder="Телефон студента">
+    <input type="text" th:value="${student.address}" name="address" placeholder="Адрес студента">
+    <input type="number" th:value="${student.old}" name="old" placeholder="Возраст студента">
+    <input type="text" th:value="${student.birthday}" name="birthday" placeholder="День рождения студента">
+    <input type="number" th:value="${student.groupId.id}" name="groupId" placeholder="Номер группы студента">
+    <button type="submit">Сохранить</button>
+</form>
+</body>
+</html>
